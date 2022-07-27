@@ -1,5 +1,11 @@
 # Technology Blog - MVC Paradigm
 
+## Heroku Deployment
+[Heroku ](https://immense-mesa-39928.herokuapp.com/)
+
+## Disclaimer
+Originally ran into issues deploying this project to Heroku, and had to create this repository to re attempt to deploy to Heroku. The first repo was unable to be deployed to Heroku, with over 30 commits at completion, due to not deploying the starter code to Heroku from the beggining before actually building the application from the ground up. [Original Repository](https://github.com/vcristian1/technologyblog-mvc)
+
 ## Description
 
 A CMS-style blog site similar to a Wordpress site, where developers can publish their blog posts and comment on other developers’ posts as well.
@@ -49,6 +55,7 @@ THEN I am signed out of the site
 WHEN I am idle on the site for more than a set time
 THEN I am able to view comments but I am prompted to log in again before I can add, update, or delete comments
 ```
+
 ## Media
 ![Screenshot of application.](./assets/screenshot1.png) 
 ![Screenshot of application.](./assets/screenshot2.png)
@@ -56,3 +63,5 @@ THEN I am able to view comments but I am prompted to log in again before I can a
 ![Screenshot of application.](./assets/screenshot4.png) 
 ![Screenshot of application.](./assets/screenshot5.png) 
 ![Screenshot of application.](./assets/screenshot6.png) 
+
+
