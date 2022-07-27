@@ -4,41 +4,78 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fund My Project!</title>
-  <link rel="stylesheet" href="/css/jass.css">
-  <link rel="stylesheet" href="/css/style.css">
+  <title>Tech | Blog</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="/public/css/style.css">
 </head>
 
 <body>
-  <div class="flex-column justify-space-around">
-    <header class="display-flex justify-space-between align-center p-2">
-      <h1>
-        <span role="img" aria-label="money">💸</span>
-        <a href="/">Fund My Project!</a>
-      </h1>
-      <nav>
-        <!-- Conditionally render login or logout links -->
-        {{#if logged_in}}
-        <a href="/profile">profile</a> |
-        <button class="no-button" id="logout">logout</button>
-        {{else}}
-        <a href="/login">login</a>
-        {{/if}}
-      </nav>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <header class="display-flex justify-space-between align-center p-3">
+      <h3>
+        <a class="text-decoration-none" href="/">Full Stack Tech Blog</a>
+      </h3>
     </header>
-    <main class="container container-fluid mt-5">
-      <!-- Render the sub layout -->
-      {{{ body }}}
-    </main>
-    <footer>
-      
-    </footer>
-  </div>
+    <button id="mobile_burger" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div id="mobile-menu" class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <nav class="">
+          <!-- Conditionally render login or logout links -->
+          {{#if logged_in}}
+          <a class="p-4 text-decoration-none" href="/">Home</a> 
+          <a class="p-4 text-decoration-none" href="/profile">New Post</a> 
+          <button class="p-2 btn btn-sm btn-danger" id="logout">Log Out</button>
+
+          {{else}}
+          <a class="p-2 btn btn-primary" href="/login">Log In</a>
+          {{/if}}
+        </nav>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container container-fluid mt-5">
+    <!-- Render the sub layout -->
+    <script>
+      const burger = document.getElementById('mobile_burger');
+      const menu = document.getElementById('mobile-menu');
+      burger.addEventListener("click", function(){
+          menu.classList.toggle("collapse");
+      })
+    </script>
+    {{!-- <script src="/js/comment.js"></script> --}}
+    {{{ body }}}
+  
+  </main>
 
   <!-- Render script for logged in users only -->
   {{#if logged_in}}
   <script src="/js/logout.js"></script>
   {{/if}}
+
 </body>
+<footer> 
+  <div class="d-flex flex-column flex-md-row text-center text-md-start justify-content-between py-4 px-4 px-xl-5 bg-primary">
+    <!-- Copyright -->
+    <div class="text-white mb-3 mb-md-0">
+      Copyright © 2022. All rights reserved.
+    </div>
+    <!-- Copyright -->
+    <!-- Right -->
+    <div>
+      <a href="https://github.com/vcristian1" class="text-white me-4">
+        <i class="bi bi-github"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/cristian-vargas-13686a1a3/" class="text-white">
+        <i class="bi bi-linkedin"></i>
+      </a>
+    </div>
+    <!-- Right -->
+  </div>
+</footer>
+
 
 </html>
