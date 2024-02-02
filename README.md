@@ -3,9 +3,6 @@
 ## Heroku Deployment
 [Heroku ](https://immense-mesa-39928.herokuapp.com/)
 
-## Disclaimer
-Originally ran into issues deploying this project to Heroku, and had to create this repository to re attempt to deploy to Heroku. The first repo was unable to be deployed to Heroku, with over 30 commits at completion, due to not deploying the starter code to Heroku from the beggining before actually building the application from the ground up. [Original Repository](https://github.com/vcristian1/technologyblog-mvc)
-
 ## Description
 
 A CMS-style blog site similar to a Wordpress site, where developers can publish their blog posts and comment on other developers’ posts as well.
